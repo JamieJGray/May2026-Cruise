@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Caribbean Star of the Seas - May 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('cruise-ship-header.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .header .subtitle {
+            font-size: 1.5em;
+            opacity: 0.9;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            color: #2c5aa0;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #f0c040;
+        }
+
+        .section h3 {
+            color: #1e4080;
+            font-size: 1.5em;
+            margin: 25px 0 15px 0;
+        }
+
+        .section h4 {
+            color: #2c5aa0;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+        }
+
+        .ship-details {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .ship-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .ship-specs-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .ship-specs-card h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .port-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .port-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .port-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .placeholder-notice {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            text-align: center;
+            border: 2px dashed #2196f3;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .benefit-card h4 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 5px solid #f0c040;
+        }
+
+        .insurance-box {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .price-tag {
+            background: #2c5aa0;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #f0c040;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .costco-logo {
+            background: #2c5aa0;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .final-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Royal Caribbean Star of the Seas</h1>
+            <div class="subtitle">May 3-10, 2026 | Eastern Caribbean Adventure</div>
+        </div>
+
+        <div class="content">
+            <!-- Ship & Accommodation Section -->
+            <div class="section">
+                <h2>Cruise & Accommodation Details</h2>
+                
+                <!-- Star of the Seas Ship Images -->
+                <div class="image-gallery">
+                    <img src="star-of-seas-exterior.jpg" alt="Star of the Seas - Stunning Night View" class="ship-image">
+                    <img src="star-of-seas-deck-overview.jpg" alt="Star of the Seas - Deck Overview with Waterpark" class="ship-image">
+                </div>
+                
+                <div class="ship-details">
+                    <h3>Ship & Dates</h3>
+                    <ul>
+                        <li><strong>Ship</strong>: Star of the Seas (Royal Caribbean's newest ship)</li>
+                        <li><strong>Departure</strong>: May 3, 2026 from Port Canaveral, Florida</li>
+                        <li><strong>Return</strong>: May 10, 2026</li>
+                        <li><strong>Duration</strong>: 7 nights</li>
+                    </ul>
+                    
+                    <h3>Our Stateroom</h3>
+                    <ul>
+                        <li><strong>Stateroom</strong>Infinite Grand Suite, Deck 9 (Sky Class - premium suite tier)</li>
+                        <li><strong>For friends/family booking</strong>: Request Deck 9 or adjacent decks (8, 10, 11) and reference our confirmation number</li>
+                    </ul>
+                </div>
+
+                <h3>Sky Class Suite Benefits (Included)</h3>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h4>Beverage & Dining</h4>
+                        <p>Priority dining reservations (90 days early)<br>
+                        Beverage packages available for purchase</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h4>Connectivity & Service</h4>
+                        <p>Free VOOM internet for all 4 family members<br>
+                        Suite Concierge for reservations & planning</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h4>Priority Access</h4>
+                        <p>Priority boarding, dining reservations, show seating, and VIP disembarkation</p>
+                    </div>
+                </div>
+
+                <!-- Ship specifications section with vertical layout -->
+                <div class="ship-specs-card">
+                    <h4>Star of the Seas Fast Facts</h4>
+                    <div style="display: flex; flex-direction: column; gap: 15px; text-align: left; max-width: 500px; margin: 0 auto; font-size: 1.1em;">
+                        <div style="border-bottom: 2px solid rgba(255,255,255,0.4); padding-bottom: 12px; font-size: 1.2em;"><strong>Total Decks:</strong> 20 decks</div>
+                        <div style="border-bottom: 2px solid rgba(255,255,255,0.4); padding-bottom: 12px; font-size: 1.2em;"><strong>Guest Capacity:</strong> 5,610 guests (double occupancy)</div>
+                        <div style="border-bottom: 2px solid rgba(255,255,255,0.4); padding-bottom: 12px; font-size: 1.2em;"><strong>Total Staterooms:</strong> 2,805 rooms</div>
+                        <div style="border-bottom: 2px solid rgba(255,255,255,0.4); padding-bottom: 12px; font-size: 1.2em;"><strong>International Crew:</strong> 2,350 crew members</div>
+                        <div style="border-bottom: 2px solid rgba(255,255,255,0.4); padding-bottom: 12px; font-size: 1.2em;"><strong>Ship Length:</strong> 1,196 feet (364 meters)</div>
+                        <div style="font-size: 1.2em;"><strong>Ship Width:</strong> 219 feet (66 meters)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ports Section -->
+            <div class="section">
+                <h2>Ports of Call & Activities</h2>
+
+                <div class="port-card">
+                    <img src="labadee-beach-haiti.jpg" alt="Labadee Beach - Royal Caribbean's Private Paradise" class="port-image">
+                    <h3>Labadee, Haiti - Royal Caribbean's Private Destination</h3>
+                    <p><strong>What makes it special</strong>: Completely safe, controlled environment designed specifically for cruise passengers</p>
+                    
+                    <h4>Perfect for your family:</h4>
+                    <ul>
+                        <li><strong>Dragon's Tail Coaster</strong>: Alpine-style mountain coaster perfect for 10-12 year olds</li>
+                        <li><strong>Arawak Aqua Park</strong>: Floating water park with slides and obstacles (ages 8+)</li>
+                        <li><strong>Multiple pristine beaches</strong> with calm, clear water</li>
+                        <li><strong>All beach amenities included</strong> with your cruise (chairs, umbrellas)</li>
+                        <li><strong>Cultural shows</strong> and local artisan demonstrations</li>
+                    </ul>
+                </div>
+
+                <div class="port-card">
+                    <img src="el-morro-fort-san-juan.jpg" alt="El Morro Fort, San Juan - Historic Spanish Fortress" class="port-image">
+                    <h3>San Juan, Puerto Rico - #1 Ranked Family Port</h3>
+                    <p><strong>Why it's the best</strong>: Perfect blend of history, culture, and adventure for tweens</p>
+                    
+                    <h4>Must-do experiences:</h4>
+                    <ul>
+                        <li><strong>El Morro & San Cristóbal Forts</strong>: 500-year-old Spanish fortresses with tunnels, dungeons, and panoramic views</li>
+                        <li><strong>Kite flying tradition</strong>: Bring $3-4 for kites to fly on El Morro's grassy field</li>
+                        <li><strong>Old San Juan exploration</strong>: Colorful colonial buildings, cobblestone streets, free trolley tours</li>
+                        <li><strong>El Yunque Rainforest</strong>: Only tropical rainforest in US National Forest System</li>
+                    </ul>
+                    
+                    <div class="highlight-box">
+                        <strong>Family advantages</strong>: US territory (no passport needed, English spoken, US dollar), most activities free or very affordable, rich history that engages 10-12 year olds
+                    </div>
+                </div>
+
+                <div class="port-card">
+                    <img src="magens-bay-st-thomas.jpg" alt="Magens Bay, St. Thomas - Crystal Clear Waters" class="port-image">
+                    <h3>Charlotte Amalie, St. Thomas - World-Class Beaches & Views</h3>
+                    <p><strong>Famous for</strong>: Magens Bay (one of world's most beautiful beaches) and duty-free shopping</p>
+                    
+                    <h4>Family highlights:</h4>
+                    <ul>
+                        <li><strong>Magens Bay Beach</strong>: Calm, shallow waters perfect for kids; small entry fee but worth it</li>
+                        <li><strong>Paradise Point Skyride</strong>: Cable car to 700-foot summit with amazing views</li>
+                        <li><strong>Coral World Ocean Park</strong>: Interactive marine experiences, shark encounters, sea turtle feedings</li>
+                        <li><strong>Duty-free shopping</strong>: Main Street Charlotte Amalie for jewelry, electronics, liquor</li>
+                    </ul>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>Weather & Timing</h4>
+                    <p><strong>May temperatures</strong>: Low-to-mid 80s°F - perfect for outdoor activities</p>
+                    <ul>
+                        <li>San Juan: 79-88°F</li>
+                        <li>St. Thomas: 81-87°F</li>
+                        <li>Labadee: 81-87°F</li>
+                    </ul>
+                    <p><strong>Why May is great</strong>: Shoulder season means fewer crowds, pleasant temperatures, and lower chance of rain compared to summer months.</p>
+                </div>
+            </div>
+
+            <!-- Booking Information -->
+            <div class="section">
+                <h2>Booking Information & Benefits</h2>
+
+                <div class="costco-logo">
+                    <h3>Benefits of Booking Through Costco Travel</h3>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Price matching: Costco will match competitor prices</li>
+                        <li><strong>Exclusive perks</strong>: $970 Costco Shop Card + $100 cruise line shipboard credit</li>
+                        <li>Enhanced customer service: Costco's travel department handles issues</li>
+                        <li>Extended warranty protection: Additional coverage on travel purchases</li>
+                        <li>No membership fee markup: Competitive pricing for non-Costco members too</li>
+                    </ul>
+                </div>
+
+                <div class="insurance-box">
+                    <h3>Travel Insurance Recommendation</h3>
+                    <div class="price-tag">Costco Travel Protection Plan: $612.85 for family of 4 (5.3% of trip cost)</div>
+                    
+                    <h4>What it covers:</h4>
+                    <ul>
+                        <li><strong>Trip cancellation</strong>: Up to $100,000 per person for illness, injury, death, work issues</li>
+                        <li><strong>Medical emergencies</strong>: $200,000 coverage during travel</li>
+                        <li><strong>Trip interruption</strong>: Up to 150% of trip cost for early return</li>
+                        <li><strong>Weather protection</strong>: Hurricane/storm coverage if warnings issued</li>
+                        <li><strong>Travel delays</strong>: Meals, lodging, transportation for 5+ hour delays</li>
+                        <li><strong>Baggage coverage</strong>: Up to $3,000 for lost/damaged luggage</li>
+                    </ul>
+                    
+                    <h4>Worth it because:</h4>
+                    <ul>
+                        <li>High financial exposure ($11,508 trip cost)</li>
+                        <li>Family of 4 = higher likelihood of someone getting sick</li>
+                        <li>19+ months until cruise = more opportunity for covered events</li>
+                        <li>Hurricane season consideration (May is just before peak season)</li>
+                    </ul>
+                    
+                    <div class="warning">
+                        <strong>Skip the "Cancel for Any Reason" upgrade</strong> ($245 extra) - only covers 50% of costs and the base policy already covers most realistic scenarios.
+                        <br><br>
+                        <strong>Pro tip</strong>: Purchase within 21 days of initial deposit to get pre-existing condition waiver.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why This Cruise is Perfect -->
+            <div class="section">
+                <h2>Why This Cruise is Perfect</h2>
+
+                <!-- Star of the Seas Complete Information Section -->
+                <div style="background: linear-gradient(135deg, #2196f3 0%, #21cbf3 100%); padding: 30px; border-radius: 15px; margin: 30px 0; color: white;">
+                    <h3 style="text-align: center; margin-bottom: 30px; font-size: 2em; color: white;">Star of the Seas Complete Guide</h3>
+                    
+                    <!-- Dining Section -->
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                        <h4 style="color: #ffeb3b; font-size: 1.5em; margin-bottom: 15px;">🍽️ Dining Options</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; font-size: 0.95em;">
+                            <div>
+                                <strong>Complimentary:</strong><br>
+                                • Aquadome Market<br>
+                                • Basecamp<br>
+                                • Coastal Kitchen<br>
+                                • Dining Room<br>
+                                • El Loco Fresh
+                            </div>
+                            <div>
+                                <strong>Casual Dining:</strong><br>
+                                • Park Café<br>
+                                • Pearl Café<br>
+                                • Sorrento's<br>
+                                • Sprinkles<br>
+                                • Surfside Bites
+                            </div>
+                            <div>
+                                <strong>Specialty Restaurants:</strong><br>
+                                • Celebration Table<br>
+                                • Chef's Table<br>
+                                • Chops Grille<br>
+                                • Desserted<br>
+                                • Giovanni's Italian
+                            </div>
+                            <div>
+                                <strong>More Options:</strong><br>
+                                • Hooked Seafood<br>
+                                • Izumi<br>
+                                • Lincoln Park<br>
+                                • Supper Club<br>
+                                • Various Cafés
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bars & Lounges -->
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                        <h4 style="color: #ff9800; font-size: 1.5em; margin-bottom: 15px;">🍹 Bars & Lounges</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; font-size: 0.95em;">
+                            <div>
+                                • 1400 Lobby Bar<br>
+                                • Boleros<br>
+                                • Bubbles<br>
+                                • Cantina Fresca<br>
+                                • Dueling Pianos
+                            </div>
+                            <div>
+                                • Music Hall<br>
+                                • Playmakers Sports Bar<br>
+                                • Bar & Arcade<br>
+                                • Rye & Bean<br>
+                                • Schooner Bar
+                            </div>
+                            <div>
+                                • The Attic<br>
+                                • The Lemon Post<br>
+                                • The Lime & Coconut<br>
+                                • The Overlook<br>
+                                • Thorn & Thistle
+                            </div>
+                            <div>
+                                • Hideaway Bar<br>
+                                • Lou's Jazz 'N Blues<br>
+                                • Spotlight Karaoke<br>
+                                • Swim & Tonic<br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kids & Teens -->
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                        <h4 style="color: #4caf50; font-size: 1.5em; margin-bottom: 15px;">👨‍👩‍👧‍👦 Kids & Teens Activities</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; font-size: 0.95em;">
+                            <div>
+                                <strong>Adventure Ocean:</strong><br>
+                                Kids club with age-appropriate activities
+                            </div>
+                            <div>
+                                <strong>Arcade:</strong><br>
+                                State-of-the-art gaming
+                            </div>
+                            <div>
+                                <strong>Baby Bay:</strong><br>
+                                Nursery services for infants
+                            </div>
+                            <div>
+                                <strong>Teen Areas:</strong><br>
+                                • Social020<br>
+                                • Playscape<br>
+                                • Splashaway Bay
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Amenities -->
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                        <h4 style="color: #e91e63; font-size: 1.5em; margin-bottom: 15px;">🎯 Other Amenities</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; font-size: 0.95em;">
+                            <div>
+                                <strong>Entertainment:</strong><br>
+                                • 8 Neighborhoods<br>
+                                • Royal Theater<br>
+                                • Aquatheater<br>
+                                • Laser Tag<br>
+                                • Rock Climbing Wall
+                            </div>
+                            <div>
+                                <strong>Wellness:</strong><br>
+                                • Vitality Spa<br>
+                                • Fitness Center<br>
+                                • Jogging Track<br>
+                                • Medical Center<br>
+                                • Multiple Pools
+                            </div>
+                            <div>
+                                <strong>Shopping & Services:</strong><br>
+                                • Casino Royale<br>
+                                • Conference Center<br>
+                                • FlowRider<br>
+                                • Mini Golf<br>
+                                • Royal Escape Room
+                            </div>
+                            <div>
+                                <strong>Technology:</strong><br>
+                                • VOOM Powered by Starlink<br>
+                                • Sports Court<br>
+                                • Whirlpools<br>
+                                • Carousel<br>
+                                • Absolute Zero
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h4>For Families with 10-12 Year Olds</h4>
+                        <ul style="text-align: left;">
+                            <li>Age-appropriate activities at each port</li>
+                            <li>Educational value: History, culture, marine life</li>
+                            <li>Safety: Well-developed tourism infrastructure</li>
+                            <li>Variety: Beach, history, adventure</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h4>Sky Class Advantages</h4>
+                        <ul style="text-align: left;">
+                            <li>Premium suite experience with enhanced service</li>
+                            <li>Suite Concierge for reservations & planning</li>
+                            <li>Priority access eliminates waiting</li>
+                            <li>$1,000+ value in included benefits</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h4>Perfect Timing</h4>
+                        <ul style="text-align: left;">
+                            <li>Ideal weather without summer heat</li>
+                            <li>Fewer crowds in shoulder season</li>
+                            <li>Better prices than peak winter</li>
+                            <li>Just before hurricane season</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <img src="caribbean-sunset-finale.jpg" alt="Caribbean Sunset - Perfect End to Your Star of the Seas Adventure" class="final-image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
